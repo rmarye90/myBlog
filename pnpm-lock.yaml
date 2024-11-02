@@ -19,6 +19,9 @@ dependencies:
     version: 4.4.5(vue@3.5.12)
 
 devDependencies:
+  '@faker-js/faker':
+    specifier: ^9.1.0
+    version: 9.1.0
   '@tsconfig/node20':
     specifier: ^20.1.4
     version: 20.1.4
@@ -376,6 +379,11 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     dependencies:
       levn: 0.4.1
+    dev: true
+
+  /@faker-js/faker@9.1.0:
+    resolution: {integrity: sha512-GJvX9iM9PBtKScJVlXQ0tWpihK3i0pha/XAhzQa1hPK/ILLa1Wq3I63Ij7lRtqTwmdTxRCyrUhLC5Sly9SLbug==}
+    engines: {node: '>=18.0.0', npm: '>=9.0.0'}
     dev: true
 
   /@humanfs/core@0.19.1:
