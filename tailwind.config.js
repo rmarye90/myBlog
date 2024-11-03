@@ -6,7 +6,13 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        display: 'Oswald, ui-serif',
+        itim: 'Itim, ui-serif',
+        playwrite: 'Playwrite GB S, ui-serif',
+      }
+    },
   },
   plugins: [
   ],

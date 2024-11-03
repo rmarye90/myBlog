@@ -2,6 +2,6 @@
 
 <template>
   <h1 class="text-6xl text-purple-600 text-center bg-slate-300 font-playwrite">
-    Hello, About!
+    Hello, Post!
   </h1>
 </template>
