@@ -27,7 +27,7 @@ console.log(posts)
         >
           {{ posts[0]?.title }}
         </h2>
-        <p class="mt-4 text-lg/8 text-gray-600">
+        <p class="line-clamp-3 mt-4 text-lg/8 text-gray-600">
           {{ posts[0]?.content }}
         </p>
         <div
@@ -79,7 +79,7 @@ console.log(posts)
                     {{ post.title }}
                   </a>
                 </h2>
-                <p class="mt-4 text-sm/6 text-gray-600">
+                <p class="line-clamp-3 mt-4 text-sm/6 text-gray-600">
                   {{ post.content }}
                 </p>
               </div>
