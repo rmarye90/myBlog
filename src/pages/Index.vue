@@ -1,18 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { useFormatDate } from '@/composables/useFormatDate'
-import type { Post } from '@/types/Post'
 import { useFetchPosts } from '@/composables/useFetchPosts'
 
-const { formatedDate } = useFormatDate('')
 const { posts } = useFetchPosts(3)
 
 console.log(posts)
 </script>
 
 <template>
-  <h1 class="p-2 text-6xl text-purple-600 text-center font-playwrite">
-    Hello, Home!
+  <h1 class="mt-20 p-2 text-6xl text-purple-600 text-center font-playwrite">
+    Hello, future !
   </h1>
   <div class="bg-white py-24 sm:py-32">
     <div
