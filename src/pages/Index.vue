@@ -36,7 +36,7 @@ console.log(posts)
           <div class="flex">
             <a
               href="#"
-              class="text-sm/6 font-semibold text-indigo-600"
+              class="text-sm/6 font-semibold text-pink-300"
               aria-describedby="featured-post"
               >Continue reading <span aria-hidden="true">&rarr;</span></a
             >

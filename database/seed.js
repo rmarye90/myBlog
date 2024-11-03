@@ -60,7 +60,7 @@ async function seed() {
   const posts = createdAuthors.flatMap((author) =>
     Array.from({ length: POSTS_PER_AUTHOR }, () => ({
       title: faker.lorem.sentence({ min: 4, max: 10}),
-      content: faker.lorem.paragraph(3),
+      content: faker.lorem.paragraph(13),
       author_id: author.id,
       created_at: faker.date.between({from: '2020-01-01', to: new Date()}).toISOString(),
     })),
