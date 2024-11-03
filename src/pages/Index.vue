@@ -1,17 +1,12 @@
 <script setup lang="ts">
 import { supabase } from '@/lib/supabaseClient'
 import { ref, onMounted } from 'vue'
-
-interface Post {
-  id: number
-  title: string
-  content: string
-  author_id: number
-  created_at: string
-}
+import { useFormatDate } from '@/composables/useFormatDate'
+import type { Post } from '@/types/Post'
 
 const posts = ref<Post[]>([])
 
+const { formatedDate } = useFormatDate('')
 
 async function getPosts() {
   const { data, error } = await supabase
@@ -44,8 +39,8 @@ onMounted(() => {
       class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 px-6 sm:gap-y-16 lg:grid-cols-2 lg:px-8"
     >
       <article class="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-lg">
-        <time datetime="2020-03-16" class="block text-sm/6 text-gray-600"
-          >{{posts[0]?.created_at}}</time
+        <time :datetime="useFormatDate(posts[0]?.created_at).formatedDate" class="block text-sm/6 text-gray-600"
+          >{{ useFormatDate(posts[0]?.created_at).formatedDate }}</time
         >
         <h2
           id="featured-post"
@@ -91,8 +86,8 @@ onMounted(() => {
         <div class="-my-12 divide-y divide-gray-900/10">
           <article class="py-12">
             <div class="group relative max-w-xl">
-              <time datetime="2020-03-16" class="block text-sm/6 text-gray-600"
-                >Mar 10, 2020</time
+              <time :datetime="useFormatDate(posts[0]?.created_at).formatedDate" class="block text-sm/6 text-gray-600"
+                >{{ useFormatDate(posts[0]?.created_at).formatedDate }}</time
               >
               <h2
                 class="mt-2 text-lg font-semibold text-gray-900 group-hover:text-gray-600"
