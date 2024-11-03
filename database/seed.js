@@ -52,7 +52,7 @@ async function seed() {
     email: faker.internet.email(),
   }))
 
-  const { data: createdAuthors, error: authorsError } = await supabase
+  const { data: createdAuthors } = await supabase
     .from('authors')
     .insert(authors)
     .select()
@@ -61,14 +61,16 @@ async function seed() {
     Array.from({ length: POSTS_PER_AUTHOR }, () => ({
       title: faker.lorem.sentence({ min: 4, max: 10}),
       content: faker.lorem.paragraph(3),
-      authorId: author.id,
+      author_id: author.id,
       created_at: faker.date.between({from: '2020-01-01', to: new Date()}).toISOString(),
     })),
   )
 
-  console.log(posts)
+const { error: postsError } = await supabase.from('posts').insert(posts)
 
 
+if (postsError) throw new Error(`Erreur insertion posts: ${postsError.message}`)
+  
 }
 
 seed()
