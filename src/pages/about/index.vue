@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1 class="text-6xl text-purple-600 text-center bg-slate-300 font-playwrite">
-    Hello, About!
+  <h1 class="text-6xl text-purple-600 text-center font-playwrite">
+    Hello, Moi !
   </h1>
 </template>

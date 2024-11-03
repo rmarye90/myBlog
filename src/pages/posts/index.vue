@@ -9,7 +9,7 @@ const { posts } = useFetchPosts(null)
   <h1 class="p-2 text-6xl text-purple-600 text-center font-playwrite">
     Hello, Folks !
   </h1>
-  <div class="bg-white py-24 sm:py-32">
+  <div class="bg-transparent py-24 sm:py-32">
     <div class="mx-auto w-full">
       <div
         v-for="post in posts"

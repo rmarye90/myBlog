@@ -11,7 +11,7 @@ console.log(posts)
   <h1 class="mt-20 p-2 text-6xl text-purple-600 text-center font-playwrite">
     Hello, future !
   </h1>
-  <div class="bg-white py-24 sm:py-32">
+  <div class="bg-transparent py-24 sm:py-32">
     <div
       class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-12 px-6 sm:gap-y-16 lg:grid-cols-2 lg:px-8"
     >
@@ -49,7 +49,7 @@ console.log(posts)
               <img
                 src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                 alt=""
-                class="h-6 w-6 flex-none rounded-full bg-gray-50"
+                class="h-6 w-6 flex-none rounded-full"
               />
               Michael Foster
             </a>
@@ -91,7 +91,7 @@ console.log(posts)
                   <img
                     src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt=""
-                    class="h-6 w-6 flex-none rounded-full bg-gray-50"
+                    class="h-6 w-6 flex-none rounded-full bg-transparent"
                   />
                   Lindsay Walton
                 </a>
