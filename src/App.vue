@@ -3,6 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import { supabase } from '@/lib/supabaseClient'
 import { Icon } from '@iconify/vue'
 import GranyBackground from '@/layout/GranyBackground.vue'
+import DarkModeToggle from './components/DarkModeToggle.vue'
 
 console.log(supabase)
 </script>
@@ -10,21 +11,22 @@ console.log(supabase)
 <template>
   <GranyBackground>
     <nav class="flex items-center justify-end gap-4 mr-4 p-8 text-3xl">
-      <RouterLink class="hover:text-purple-600 font-semibold" to="/index"
+      <RouterLink class="hover:text-purple-600 font-semibold dark:text-gray-200" to="/index"
         ><Icon
           icon="iconamoon:home-thin"
           class="w-8 h-8 hover:text-purple-600"
       /></RouterLink>
-      <RouterLink class="hover:text-purple-600 font-semibold px-4" to="/about"
+      <RouterLink class="hover:text-purple-600 font-semibold px-4 dark:text-gray-200" to="/about"
         ><Icon
           icon="iconamoon:information-square-thin"
           class="w-8 h-8 hover:text-purple-600"
       /></RouterLink>
-      <RouterLink class="hover:text-purple-600 font-semibold" to="/posts"
+      <RouterLink class="hover:text-purple-600 font-semibold dark:text-gray-200" to="/posts"
         ><Icon
           icon="iconamoon:news-thin"
           class="w-8 h-8 hover:text-purple-600"
       /></RouterLink>
+      <DarkModeToggle />
     </nav>
     <RouterView />
   </GranyBackground>

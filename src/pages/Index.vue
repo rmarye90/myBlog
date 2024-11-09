@@ -16,7 +16,7 @@ const goToPost = (id: number) => {
 </script>
 
 <template>
-  <h1 class="mt-20 p-2 text-6xl text-purple-600 text-center font-playwrite">
+  <h1 class="mt-20 p-2 text-6xl text-primary text-center font-playwrite">
     Hello, future !
   </h1>
   <div class="bg-transparent py-24 sm:py-32">
