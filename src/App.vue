@@ -11,22 +11,23 @@ console.log(supabase)
 <template>
   <GranyBackground>
     <nav class="flex items-center justify-end gap-4 mr-4 p-8 text-3xl">
-      <RouterLink class="hover:text-purple-600 font-semibold dark:text-gray-200" to="/index"
+      <RouterLink aria-label="Home" to="/index"
         ><Icon
           icon="iconamoon:home-thin"
-          class="w-8 h-8 hover:text-purple-600"
+          class="w-8 h-8 hover:text-primary dark:hover:text-primaryDark "
       /></RouterLink>
-      <RouterLink class="hover:text-purple-600 font-semibold px-4 dark:text-gray-200" to="/about"
+      <RouterLink aria-label="About" class="px-4" to="/about"
         ><Icon
           icon="iconamoon:information-square-thin"
-          class="w-8 h-8 hover:text-purple-600"
+          aria-label="About"
+          class="w-8 h-8 hover:text-primary dark:hover:text-primaryDark"
       /></RouterLink>
-      <RouterLink class="hover:text-purple-600 font-semibold dark:text-gray-200" to="/posts"
+      <RouterLink aria-label="Posts" to="/posts"
         ><Icon
           icon="iconamoon:news-thin"
-          class="w-8 h-8 hover:text-purple-600"
+          class="w-8 h-8 hover:text-primary dark:hover:text-primaryDark"
       /></RouterLink>
-      <DarkModeToggle />
+      <DarkModeToggle class="text-neutral-900 dark:text-amber-300 ml-4" />
     </nav>
     <RouterView />
   </GranyBackground>

@@ -10,8 +10,11 @@ export default {
     extend: {
       colors: {
         primary: '#c026d3',
+        primaryDark: '#4f46e5',
         secondary: '#f9a8d4',
-        tertiary: '#4b5563',
+        secondaryDark: '#38bdf8',
+        tertiary: '#111827',
+        tertiaryDark: '#d4d4d4',
       },
       fontFamily: {
         display: 'Oswald, ui-serif',

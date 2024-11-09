@@ -16,7 +16,7 @@ const goToPost = (id: number) => {
 </script>
 
 <template>
-  <h1 class="mt-20 p-2 text-6xl text-primary text-center font-playwrite">
+  <h1 class="mt-20 p-2 text-6xl text-primary dark:text-primaryDark text-center font-playwrite">
     Hello, future !
   </h1>
   <div class="bg-transparent py-24 sm:py-32">
@@ -31,7 +31,7 @@ const goToPost = (id: number) => {
         >
         <h2
           id="featured-post"
-          class="mt-4 text-pretty text-3xl font-semibold font-playwrite tracking-tight text-gray-900 sm:text-4xl"
+          class="mt-4 text-pretty text-3xl font-semibold font-playwrite tracking-tight text-tertiary dark:text-tertiaryDark sm:text-4xl"
         >
           {{ posts[0]?.title }}
         </h2>
@@ -45,7 +45,7 @@ const goToPost = (id: number) => {
             <a
               href="#"
               @click="goToPost(posts[0]?.id)"
-              class="text-sm/6 font-semibold text-pink-300"
+              class="text-sm/6 font-semibold text-secondary dark:text-secondaryDark"
               aria-describedby="featured-post"
               >Continue reading <span aria-hidden="true">&rarr;</span></a
             >

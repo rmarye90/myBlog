@@ -5,7 +5,7 @@ const isDark = useDark()
 const toggleDark = useToggle(isDark)
 </script>
 <template>
-  <label class="swap swap-rotate">
+  <label aria-label="Toggle Dark Mode" class="swap swap-rotate">
     <!-- this hidden checkbox controls the state -->
     <input
       type="checkbox"
