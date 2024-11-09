@@ -1,10 +1,18 @@
 <script setup lang="ts">
 import { useFormatDate } from '@/composables/useFormatDate'
 import { useFetchPosts } from '@/composables/useFetchPosts'
+import { useRouter } from 'vue-router'
 
 const { posts } = useFetchPosts(3)
 
-console.log(posts)
+const router = useRouter()
+
+const goToPost = (id: number) => {
+  router.push(`/posts/${id}`)
+}
+
+
+
 </script>
 
 <template>
@@ -36,6 +44,7 @@ console.log(posts)
           <div class="flex">
             <a
               href="#"
+              @click="goToPost(posts[0]?.id)"
               class="text-sm/6 font-semibold text-pink-300"
               aria-describedby="featured-post"
               >Continue reading <span aria-hidden="true">&rarr;</span></a

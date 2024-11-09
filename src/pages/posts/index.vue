@@ -25,7 +25,7 @@ const { posts } = useFetchPosts(null)
                 >{{ useFormatDate(posts[0]?.created_at).formatedDate }}</time
               >
               <h2
-                class="font-playwrite mt-2 text-lg font-semibold text-gray-900 group-hover:text-gray-600"
+                class="font-playwrite mt-2 text-lg font-semibold text-gray-900 group-hover:text-rose-300 cursor-pointer"
               >
                 <a href="#">
                   <span class="absolute inset-0"></span>

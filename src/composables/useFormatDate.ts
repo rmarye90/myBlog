@@ -1,4 +1,5 @@
-export const useFormatDate = (date: string) => {
+export const useFormatDate = (date: string | undefined) => {
+  if (!date) return { formatedDate: '' }
   const dateObject = new Date(date)
   const options: Intl.DateTimeFormatOptions = {
     month: 'short',

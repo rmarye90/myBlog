@@ -28,8 +28,6 @@ export const useFetchPosts = (limit: number | null) => {
         console.error('Erreur lors de la récupération des posts:', error)
       }
     }
-
-    console.log('Posts:', posts)
   }
 
   onMounted(() => {
