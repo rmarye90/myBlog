@@ -16,7 +16,7 @@ const goToPost = (id: number) => {
 </script>
 
 <template>
-  <h1 class="mt-20 p-2 text-6xl text-primary dark:text-primaryDark text-center font-playwrite">
+  <h1 class="mt-20 p-2 text-6xl text-primary-light dark:text-primary-dark text-center font-playwrite">
     Hello, future !
   </h1>
   <div class="bg-transparent py-24 sm:py-32">
@@ -26,16 +26,16 @@ const goToPost = (id: number) => {
       <article class="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-lg">
         <time
           :datetime="useFormatDate(posts[0]?.created_at).formatedDate"
-          class="font-playwrite block text-sm/6 text-gray-600"
+          class="font-playwrite block text-sm/6 text-text-light dark:text-text-dark"
           >{{ useFormatDate(posts[0]?.created_at).formatedDate }}</time
         >
         <h2
           id="featured-post"
-          class="mt-4 text-pretty text-3xl font-semibold font-playwrite tracking-tight text-tertiary dark:text-tertiaryDark sm:text-4xl"
+          class="mt-4 text-pretty text-3xl font-semibold font-playwrite tracking-tight text-titreSecondary-light dark:text-titreSecondary-dark sm:text-4xl"
         >
           {{ posts[0]?.title }}
         </h2>
-        <p class="line-clamp-3 mt-4 text-lg/8 text-gray-600">
+        <p class="line-clamp-3 mt-4 text-lg/8 text-text-light dark:text-text-dark">
           {{ posts[0]?.content }}
         </p>
         <div
@@ -45,7 +45,7 @@ const goToPost = (id: number) => {
             <a
               href="#"
               @click="goToPost(posts[0]?.id)"
-              class="text-sm/6 font-semibold text-secondary dark:text-secondaryDark"
+              class="text-sm/6 font-semibold text-lien-light dark:text-lien-dark hover:text-lien-dark dark:hover:text-lien-light"
               aria-describedby="featured-post"
               >Continue reading <span aria-hidden="true">&rarr;</span></a
             >
@@ -53,7 +53,7 @@ const goToPost = (id: number) => {
           <div class="flex lg:border-t lg:border-gray-900/10 lg:pt-8">
             <a
               href="#"
-              class="flex gap-x-2.5 text-sm/6 font-semibold text-gray-900"
+              class="flex gap-x-2.5 text-sm/6 font-semibold text-titreSecondary-light dark:text-titreSecondary-dark"
             >
               <img
                 src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -70,32 +70,31 @@ const goToPost = (id: number) => {
         <div
           v-for="(post, index) in posts"
           :key="post.id"
-          class="mx-auto w-full max-w-2xl border-t border-gray-900/10 pt-12 sm:pt-16 lg:mx-0 lg:max-w-none lg:border-t-0 lg:pt-0"
         >
-          <div v-if="index !== 0" class="-my-12 divide-y divide-gray-900/10">
+          <div v-if="index !== 0" class="-my-12">
             <article class="py-12">
               <div class="group relative max-w-xl">
                 <time
                   :datetime="useFormatDate(posts[0]?.created_at).formatedDate"
-                  class="font-playwrite block text-sm/6 text-gray-600"
+                  class="font-playwrite block text-sm/6 text-text-light dark:text-text-dark"
                   >{{ useFormatDate(posts[0]?.created_at).formatedDate }}</time
                 >
                 <h2
-                  class="font-playwrite mt-2 text-lg font-semibold text-gray-900 group-hover:text-gray-600"
+                  class="font-playwrite mt-2 text-lg font-semibold text-titreSecondary-light dark:text-titreSecondary-dark group-hover:text-primary-light dark:group-hover:text-primary-dark"
                 >
                   <a href="#">
                     <span class="absolute inset-0"></span>
                     {{ post.title }}
                   </a>
                 </h2>
-                <p class="line-clamp-3 mt-4 text-sm/6 text-gray-600">
+                <p class="line-clamp-3 mt-4 text-sm/6 text-text-light dark:text-text-dark">
                   {{ post.content }}
                 </p>
               </div>
               <div class="mt-4 flex">
                 <a
                   href="#"
-                  class="relative flex gap-x-2.5 text-sm/6 font-semibold text-gray-900"
+                  class="relative flex gap-x-2.5 text-sm/6 font-semibold text-titreSecondary-light dark:text-titreSecondary-dark"
                 >
                   <img
                     src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"

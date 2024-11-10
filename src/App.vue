@@ -14,18 +14,18 @@ console.log(supabase)
       <RouterLink aria-label="Home" to="/index"
         ><Icon
           icon="iconamoon:home-thin"
-          class="w-8 h-8 hover:text-primary dark:hover:text-primaryDark "
+          class="w-8 h-8 hover:text-primary-light dark:hover:text-primary-dark "
       /></RouterLink>
       <RouterLink aria-label="About" class="px-4" to="/about"
         ><Icon
           icon="iconamoon:information-square-thin"
           aria-label="About"
-          class="w-8 h-8 hover:text-primary dark:hover:text-primaryDark"
+          class="w-8 h-8 hover:text-primary-light dark:hover:text-primary-dark"
       /></RouterLink>
       <RouterLink aria-label="Posts" to="/posts"
         ><Icon
           icon="iconamoon:news-thin"
-          class="w-8 h-8 hover:text-primary dark:hover:text-primaryDark"
+          class="w-8 h-8 hover:text-primary-light dark:hover:text-primary-dark"
       /></RouterLink>
       <DarkModeToggle class="text-neutral-900 dark:text-amber-300 ml-4" />
     </nav>

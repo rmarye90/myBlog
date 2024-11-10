@@ -9,12 +9,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#c026d3',
-        primaryDark: '#4f46e5',
-        secondary: '#f9a8d4',
-        secondaryDark: '#38bdf8',
-        tertiary: '#111827',
-        tertiaryDark: '#d4d4d4',
+        primary: {
+          light:'#c026d3',
+          dark:'#4f46e5',
+        },
+        text: {
+          light:'#4b5563',
+          dark:'#a8a29e',
+        },
+        titreSecondary: {
+          light:'#111827',
+          dark:'#d4d4d4',
+        },
+        lien: {
+          light:'#f9a8d4',
+          dark:'#38bdf8'
+        },
+        
+        
       },
       fontFamily: {
         display: 'Oswald, ui-serif',
